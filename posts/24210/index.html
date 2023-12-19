@@ -1,0 +1,1082 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>AcWing C++语法基础课 Week1 变量、表达式与顺序语句 | Akari的小站</title><meta name="keywords" content="AcWing C++基础课"><meta name="author" content="Akari"><meta name="copyright" content="Akari"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="AcWing C++语法基础课 Week1 变量、表达式与顺序语句"><meta name="application-name" content="AcWing C++语法基础课 Week1 变量、表达式与顺序语句"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="AcWing C++语法基础课 Week1 变量、表达式与顺序语句"><meta property="og:url" content="http://example.com/posts/24210/index.html"><meta property="og:site_name" content="Akari的小站"><meta property="og:description" content="[toc]   1. AcWing 604. 圆的面积 【简单】顺序结构  一、题目描述计算圆的面积的公式定义为 A&amp;#x3D;πR^2。请利用这个公式计算所给圆的面积。π 的取值为 3.14159。 输入格式输入包含一个浮点数，为圆的半径 R。 输出格式输出格式为 A&amp;#x3D;X，其中 X 为圆"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://picdm.sunbangyan.cn/2023/12/09/7cb475fd5799bb645b863c2827d5dff7.jpeg"><meta property="article:author" content="Akari"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://picdm.sunbangyan.cn/2023/12/09/7cb475fd5799bb645b863c2827d5dff7.jpeg"><meta name="description" content="[toc]   1. AcWing 604. 圆的面积 【简单】顺序结构  一、题目描述计算圆的面积的公式定义为 A&amp;#x3D;πR^2。请利用这个公式计算所给圆的面积。π 的取值为 3.14159。 输入格式输入包含一个浮点数，为圆的半径 R。 输出格式输出格式为 A&amp;#x3D;X，其中 X 为圆"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/posts/24210/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://waline-blog-hxla8mye0-akari2333s-projects.vercel.app/',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Akari","link":"链接: ","source":"来源: Akari的小站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Akari的小站',
+  title: 'AcWing C++语法基础课 Week1 变量、表达式与顺序语句',
+  postAI: '',
+  pageFillDescription: '1. , 一、题目描述, 二、代码示例, 第一种, 第二种, 2. , 一、题目描述, 二、代码示例, 3. , 一、题目描述, 二、代码示例, 4. , 一、题目描述, 二、代码示例, 5. , 一、题目描述, 二、代码示例, 6. , 一、题目描述, 二、代码示例, 7. , 一、题目描述, 二、错误代码, 三、代码示例, （1）在 错误代码 的基础上修改, （2）把 [10] 给去掉, （3）使用字符数组 char a[10], 四、总结, （1）关于使用 NAME[10] 会Segmentation fault（段错误）, （2）关于第一种修改也是错误的原因, 1. 关于 Accepted 的原因, 2. 关于这种写法为什么是错的原因, （3）C++中 string 的一些用法, （4）C++中关于数组和单一变量的声明的区别, （5）常用头文件, 8. , 一、题目描述, 二、代码示例, 9. , 一、题目描述, 二、代码示例, 10. , 一、题目描述, 二、代码示例, 11. , 一、题目描述, 二、代码示例, 12. , 一、题目描述, 二、代码示例, 13. , 一、题目描述, 二、代码示例, 14. , 一、题目描述, 二、错误代码, （1）int x = (l / 30) * 60, （2）double x = (l / 30) * 60, （3）double x = (l / 30.0) * 60, 三、代码示例, 1. 把小数位改为0, 2. 使用位运算 n ltlt 1, 3. 直接 n / 0.5, 四、小结, 1. 仔细观察数据, 2. 位运算圆的面积简单顺序结构一题目描述计算圆的面积的公式定义为请利用这个公式计算所给圆的面积的取值为输入格式输入包含一个浮点数为圆的半径输出格式输出格式为其中为圆的面积用浮点数表示保留四位小数数据范围输入样例输出样例二代码示例第一种传统的写法不过在中该怎么写第二种在中使用来控制小数位需要引入头文件用法保留的位数变量运用需要运用头文件括号中的数字表示为输出保留小数点后几位具体格式为保留位数变量简单乘积简单顺序结构一题目描述读取两个整数值在此之后计算它们的乘积并将结果存储在名为的变量中输出结果如下例所示输入格式共两行每行包含一个整数输出格式输出格式为其中为乘积结果数据范围输入的两个整数的绝对值均不超过输入样例输出样例二代码示例简单题没什么好说的平均数简单顺序结构一题目描述读取两个浮点数和的值对应于两个学生的成绩请你计算学生的平均分其中的成绩的权重为的成绩的权重为成绩的取值范围在到之间且均保留一位小数输入格式输入占两行每行包含一个浮点数第一行表示第二行表示输出格式输出格式为其中为平均分结果保留五位小数数据范围输入样例输出样例二代码示例唯一需要注意的是权重的计算方法权重的计算权重的计算平均数简单顺序结构一题目描述读取三个浮点数和的值对应于三个学生的成绩请你计算学生的平均分其中的成绩的权重为的成绩的权重为的成绩的权值为成绩的取值范围在到之间且均保留一位小数输入格式输入共三行每行包含一个浮点数第一行表示第二行表示第三行表示输出格式输出格式为其中为平均分结果保留一位小数数据范围输入样例输出样例二代码示例差简单顺序结构一题目描述读取四个整数并计算的值输入格式输入共四行第一行包含整数第二行包含整数第三行包含整数第四行包含整数输出格式输出格式为其中为的结果数据范围输入样例输出样例二代码示例工资简单顺序结构一题目描述请编写一个程序可以读取一名员工的员工编号本月工作总时长小时以及时薪并输出他的工资条工资条中包括员工编号和员工月收入输入格式输入包含两个整数和一个浮点数分别代表员工编号工作时长以及时薪每个数占一行输出格式输出共两行第一行格式为其中为员工编号第二行格式为其中为该员工月收入保留两位小数数据范围员工编号总工作时长时薪输入样例输出样例二代码示例工资和奖金简单顺序结构一题目描述请你编写一个程序给定你一个销售人员的名字底薪以及月销售额请你计算他的月收入是多少已知月收入等于底薪加的月销售额所有数据保留两位小数输入格式输入第一行包含一个由大写字母构成的长度不超过的字符串表示销售人员的名字第二行包含一个浮点数表示该人员的底薪第三行包含一个浮点数表示该人员的月销售额输出格式输出格式为为该人员月收入数据范围底薪月销售额输入样例输出样例二错误代码错误提示在第行使用读取了但是数组只有个元素从到所以应该用而不是另外在输入和之前没有检查是否成功读取到了字符串如果用户没有输入任何内容就直接按回车键可能会导致流进入异常状态需要使用和来清除错误状态并跳过当前行的剩余字符三代码示例在错误代码的基础上修改虽然了但是这种写法也是错的详情见总结修改为检查是否成功读取到字符串段错误通常是因为程序试图访问不属于自己的内存区域或者试图执行非法操作导致的中可能的原因包括但不限于访问数组越界使用未初始化的指针动态分配内存失败这样可以避免出现的问题并且增加了对输入错误的处理把给去掉输入字符串方便使用字符数组四总结关于使用会段错误先来复习一下段错误段错误通常是因为程序试图访问不属于自己的内存区域或者试图执行非法操作导致的中可能的原因包括但不限于访问数组越界使用未初始化的指针动态分配内存失败声明了一个包含个字符串的数组而尝试读取输入到这是数组的第个元素在中数组是从零开始索引的这是错误的关于第一种修改也是错误的原因关于的原因声明了一个包含个字符串的的数组不是字符数组每一个都可以存储字符串而是把输入的字符串存到数组的第个元素中即是有效的关于这种写法为什么是错的原因这种做法可能会导致代码的可读性降低因为此题中是一个单一的字符串而不是一个字符串数组通常情况下如果只需要一个字符串直接声明一个类型的变量会更清晰中的一些用法在中使用类型时不需要指定大小因为类会根据实际存储的字符动态调整大小这是类的一个优势因为它能够自动处理字符串的大小变化无需手动管理内存当在中声明时声明的是一个包含个对象的数组而不是字符数组数组中的每个元素到都是一个独立的对象可以容纳一系列字符在中是标准库提供的一个类表示一系列字符与传统的字符数组不同类提供了更多的功能通常比传统的字符数组更方便和安全因此通常的做法是直接声明一个变量而不是一个固定大小的字符串数组中关于数组和单一变量的声明的区别定义一个包含个字符串的数组这是一个包含个字符串的数组的声明数组的每个元素都可以存储一个独立的字符串数组的索引是从到因此有效的访问范围是到适用于需要存储多个字符串的情况每个字符串对应一个数组元素定义一个单一字符串变量一个单一的字符串变量的声明只能存储一个字符串适用于只需要存储一个字符串的情况相同点两者都是用来存储字符串的在编写代码时可以使用相似的语法来操作例如使用读取输入或者使用打印输出区别是一个包含多个字符串的数组每个元素都是一个独立的字符串是一个单一的字符串变量只能存储一个字符串根据需求选择数组或者单一变量取决于是需要处理多个字符串还是单一字符串常用头文件头文件包括包括其中编译速度比快包括常用数学公式如万能头文件简单计算简单顺序结构一题目描述给定你两个产品的产品编号产品数量以及产品单价请你计算买下两种产品一共需要花费多少钱输入格式输入共两行每行包含两个整数以及一个浮点数表示其中一件产品的产品编号产品数量以及产品单价输出格式输出格式为其中为产品总价值保留两位小数数据范围产品编号产品数量产品单价输入样例输出样例二代码示例球的体积简单顺序结构一题目描述给定你一个球体的半径请你计算球体的体积计算球体的公式为取注意有些语言中无法得到建议在公式中使用输入格式输入一个整数输出格式输出格式为其中为球体的体积结果保留三位小数数据范围输入样例输出样例二代码示例需要注意一点得不到要使用面积简单顺序结构一题目描述给定三个浮点数和然后计算如下图形的面积底边为高为的三角形半径的圆底边为和高为的梯形边长为的正方形边长为和的长方形输入格式输入共一行包含三个保留一位小数的浮点数输出格式输出共五行形式如下所示第一行格式为其中为所求三角形面积第二行格式为其中为所求圆形面积第三行格式为其中为所求梯形面积第四行格式为其中为所求正方形面积第五行格式为其中为所求长方形面积所有答案保留三位小数数据范围输入样例输出样例二代码示例最大值中等顺序结构一题目描述给定三个整数请你找出它们中的最大值下列公式可能对你有所帮助输入格式输入占一行包含三个整数输出格式输出格式为其中为三个数中的最大值数据范围给定整数输入样例输出样例二代码示例求两个数的最大值油耗简单顺序结构一题目描述给定一个汽车行驶的总路程和消耗的油量请你求出汽车每消耗升汽油可行驶多少公里路程输入格式输入共两行第一行包含整数表示行驶总路程第二行包含保留一位小数的浮点数表示消耗的油量输出格式输出格式为其中为计算结果保留三位小数数据范围输入样例输出样例二代码示例两点间的距离简单顺序结构一题目描述给定两个点和其中的坐标为的坐标为请你计算两点间的距离是多少输入格式输入共两行每行包含两个双精度浮点数表示其中一个点的坐标输入数值均保留一位小数输出格式输出你的结果保留四位小数数据范围输入样例输出样例二代码示例距离中等顺序结构一题目描述两辆汽车在同一地点同时沿同一方向前进一辆车的速度为另一辆车的速度为显然快车与慢车的距离会不断拉开每过一个小时分钟两车的距离就拉开公里现在告诉你两车之间的距离为公里请你求出两车已经行驶了多长时间输入格式输入包含一个整数表示两车之间的距离输出格式输出格式为其中为已经行驶的时间单位为分钟数据范围输入样例输出样例二错误代码题目并没有直接说的变量类型下面这种和第种一样因为向下取整整个表达式都是整数所以和一样代码提交状态代码运行状态错误数据如下所示输入输出标准答案运行时间同第种错误代码提交状态代码运行状态错误数据如下所示输入输出标准答案运行时间可以看出题目输出是整数即没有小数所以小数位设置为即可代码提交状态代码运行状态错误数据如下所示输入输出标准答案运行时间三代码示例把小数位改为中控制小数位还可以这样子只需要改一个数字就好不过感觉还是方便使用位运算位运算效率超高的仔细观察题目数据也就是说乘就完事了所以使用位运算是比较好的一种方法左移运算是一种位运算用于将一个二进制数的所有位向左移动指定的位数在左移运算中右侧用零填充对于一个二进制数左移运算表示将的所有位向左移动位每一位都向左移动而右侧用填充左移操作实际上相当于将原数乘以的次方直接快车与慢车拉开的距离公里四小结仔细观察数据就跟数学题一样仔细观察数据之间的关系位运算位运算是一种在计算机中操作二进制位的技术它使用位和来执行各种操作如移位与或异或等位运算通常用于处理底层的数据存储和操作例如在嵌入式系统图形处理密码学等领域常见的位运算操作与运算对应位都为时结果为否则结果为例如或运算对应位有一个为时结果为否则结果为例如异或运算对应位相异时结果为否则结果为例如取反运算对每个位取反即变为变为例如左移运算将二进制数左移指定位数右侧补例如右移运算将二进制数右移指定位数左侧根据符号位补或补例如位运算可以在某些情况下提高代码的效率尤其是对于一些需要高性能的场景在使用位运算时需要了解二进制数的表示和运算规则并谨慎处理符号位对于有符号整数这些位运算符可以用于整数类型如等的操作要特别注意在使用右移运算符时对于有符号整数可能会根据实现方式产生符号位的填充这可能导致不同的结果因此在使用右移运算时要确保理解底层实现和符号位的影响位运算的优势效率位运算是在硬件层面上进行的操作通常比算术运算更快对于一些对性能要求较高的应用如嵌入式系统图形处理密码学等领域使用位运算可以提高代码的执行效率节省空间位运算可以用较少的位数表示信息从而减小数据占用的空间这在存储大量二进制数据时尤为重要例如使用位掩码可以将多个布尔值压缩到一个整数中从而减少内存占用逻辑清晰在一些算法和数据结构中使用位运算可以使代码更加简洁和直观例如使用位运算来检查某个数是否是的幂次方可以用一行代码完成而不需要使用乘法或除法等运算位掩码和标志位位运算常用于创建位掩码和处理标志位通过位掩码可以使用一个整数来表示多个布尔状态从而减小存储和传输开销加密和哈希算法位运算在密码学和哈希算法中经常用到因为它们能够以比较底层的方式处理二进制数据提供高效的加密和哈希操作尽管位运算在某些场景下具有优势但在编写代码时也要注意代码的可读性和可维护性过度使用位运算可能会导致代码难以理解从而降低代码的质量因此在选择是否使用位运算时需要权衡代码的性能需求和代码的清晰度',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-19 16:17:43',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://picdl.sunbangyan.cn/2023/11/24/b45e6fde93484c373c0976fab70d6963.jpeg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Akari的小站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">音乐</div><span class="author-content-item-title">灵魂的碰撞💥</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">20</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">27</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/AcWing/" itemprop="url">AcWing</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/AcWing-C-%E5%9F%BA%E7%A1%80%E8%AF%BE/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AcWing C++基础课</span></a></span></div></div><h1 class="post-title" itemprop="name headline">AcWing C++语法基础课 Week1 变量、表达式与顺序语句</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-12-19T07:28:53.000Z" title="发表于 2023-12-19 15:28:53">2023-12-19</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-12-19T08:17:43.614Z" title="更新于 2023-12-19 16:17:43">2023-12-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">6.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>26分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="AcWing C++语法基础课 Week1 变量、表达式与顺序语句"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为郑州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>郑州</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/24210/#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://picdm.sunbangyan.cn/2023/12/09/7cb475fd5799bb645b863c2827d5dff7.jpeg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/posts/24210/"><header><a class="post-meta-categories" href="/categories/AcWing/" itemprop="url">AcWing</a><a href="/tags/AcWing-C-%E5%9F%BA%E7%A1%80%E8%AF%BE/" tabindex="-1" itemprop="url">AcWing C++基础课</a><h1 id="CrawlerTitle" itemprop="name headline">AcWing C++语法基础课 Week1 变量、表达式与顺序语句</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Akari</span><time itemprop="dateCreated datePublished" datetime="2023-12-19T07:28:53.000Z" title="发表于 2023-12-19 15:28:53">2023-12-19</time><time itemprop="dateCreated datePublished" datetime="2023-12-19T08:17:43.614Z" title="更新于 2023-12-19 16:17:43">2023-12-19</time></header><p>[toc]</p>
+<hr>
+<hr>
+<h1 id="1-AcWing-604-圆的面积"><a href="#1-AcWing-604-圆的面积" class="headerlink" title="1. AcWing 604. 圆的面积"></a>1. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/606/">AcWing 604. 圆的面积</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>计算圆的面积的公式定义为 A&#x3D;πR^2。<br>请利用这个公式计算所给圆的面积。<br>π 的取值为 3.14159。</p>
+<p><strong>输入格式</strong><br>输入包含一个浮点数，为圆的半径 R。</p>
+<p><strong>输出格式</strong><br>输出格式为 A&#x3D;X，其中 X 为圆的面积，用浮点数表示，保留四位小数。</p>
+<p><strong>数据范围</strong><br>0&lt;R&lt;10000.00</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.00</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A=12.5664</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例"><a href="#二、代码示例" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><p>传统的 C 写法，不过在 C++ 中该怎么写？</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> R;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;R);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A=%.4lf\n&quot;</span>, <span class="number">3.14159</span>*R*R);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><p>在 C++ 中使用 <code>fixed&lt;&lt;setprecision( )</code> 来控制小数位，需要引入头文件 <code>&lt;iomanip&gt;</code>。<br>用法：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">fixed</span>() &lt;&lt; <span class="built_in">setprecision</span>( 保留的位数 ) &lt;&lt; 变量 &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-06 20:30:36</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span>   <span class="comment">//运用fixed&lt;&lt;setprecision()</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> R, A;</span><br><span class="line">    cin&gt;&gt;R;</span><br><span class="line">    A = PI * R * R;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;A=&quot;</span>&lt;&lt;fixed&lt;&lt;<span class="built_in">setprecision</span>(<span class="number">4</span>)&lt;&lt;A&lt;&lt;endl;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">      需要运用头文件&lt;iomanip&gt;</span></span><br><span class="line"><span class="comment">      “fixed&lt;&lt;setprecision(4)”，括号中的数字表示为输出保留小数点后几位，</span></span><br><span class="line"><span class="comment">      具体格式为：cout&lt;&lt;fixed&lt;&lt;setprecision(保留位数)&lt;&lt;变量&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="2-AcWing-605-简单乘积"><a href="#2-AcWing-605-简单乘积" class="headerlink" title="2. AcWing 605. 简单乘积"></a>2. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/607/">AcWing 605. 简单乘积</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-1"><a href="#一、题目描述-1" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>读取两个整数值。<br>在此之后，计算它们的乘积并将结果存储在名为 PROD 的变量中。<br>输出结果如下例所示。</p>
+<p><strong>输入格式</strong><br>共两行，每行包含一个整数。</p>
+<p><strong>输出格式</strong><br>输出格式为 PROD &#x3D; X，其中 X 为乘积结果。</p>
+<p><strong>数据范围</strong><br>输入的两个整数的绝对值均不超过 10000。</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">9</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PROD = 27</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-1"><a href="#二、代码示例-1" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><p>简单题，没什么好说的。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-06 20:31:10</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b, PROD;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    PROD = a*b;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;PROD = &quot;</span> &lt;&lt; PROD &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="3-AcWing-606-平均数1"><a href="#3-AcWing-606-平均数1" class="headerlink" title="3. AcWing 606. 平均数1"></a>3. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/608/">AcWing 606. 平均数1</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-2"><a href="#一、题目描述-2" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>读取两个浮点数 A 和 B 的值，对应于两个学生的成绩。<br>请你计算学生的平均分，其中 A 的成绩的权重为 3.5，B 的成绩的权重为 7.5。<br>成绩的取值范围在 0 到 10 之间，且均保留一位小数。</p>
+<p><strong>输入格式</strong><br>输入占两行，每行包含一个浮点数，第一行表示 A，第二行表示 B。</p>
+<p><strong>输出格式</strong><br>输出格式为 MEDIA &#x3D; X，其中 X 为平均分，结果保留五位小数。</p>
+<p><strong>数据范围</strong><br>0≤A,B≤10.0</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5.0</span><br><span class="line">7.1</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MEDIA = 6.43182</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-2"><a href="#二、代码示例-2" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><p>唯一需要注意的是权重的计算方法······<br><strong>权重的计算：(A*3.5 + B*7.5) &#x2F; (3.5 + 7.5)</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-06 20:36:51</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> A, B, MEDIA = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">    MEDIA = (A*<span class="number">3.5</span> + B*<span class="number">7.5</span>) / <span class="number">11</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;MEDIA = &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">5</span>) &lt;&lt; MEDIA;</span><br><span class="line">    <span class="comment">// 权重的计算：(A*3.5 + B*7.5) / (3.5 + 7.5)</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="4-AcWing-607-平均数2"><a href="#4-AcWing-607-平均数2" class="headerlink" title="4. AcWing 607. 平均数2"></a>4. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/609/">AcWing 607. 平均数2</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-3"><a href="#一、题目描述-3" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>读取三个浮点数 A，B 和 C 的值，对应于三个学生的成绩。<br>请你计算学生的平均分，其中 A 的成绩的权重为 2，B 的成绩的权重为 3，C 的成绩的权值为 5。<br>成绩的取值范围在 0 到 10 之间，且均保留一位小数。</p>
+<p><strong>输入格式</strong><br>输入共三行，每行包含一个浮点数，第一行表示 A，第二行表示 B，第三行表示 C。</p>
+<p><strong>输出格式</strong><br>输出格式为 MEDIA &#x3D; X，其中 X 为平均分，结果保留一位小数。</p>
+<p><strong>数据范围</strong><br>0≤A,B,C≤10.0,</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5.0</span><br><span class="line">6.0</span><br><span class="line">7.0</span><br></pre></td></tr></table></figure>
+
+<p>输出样例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MEDIA = 6.3</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-3"><a href="#二、代码示例-3" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-06 20:48:53</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> A, B, C, MEDIA;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; A &gt;&gt; B &gt;&gt; C;</span><br><span class="line">    MEDIA = ( A*<span class="number">2</span> + B*<span class="number">3</span> + C*<span class="number">5</span> ) / <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;MEDIA = &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">1</span>) &lt;&lt; MEDIA &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="5-AcWing-608-差"><a href="#5-AcWing-608-差" class="headerlink" title="5. AcWing 608. 差"></a>5. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/610/">AcWing 608. 差</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-4"><a href="#一、题目描述-4" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>读取四个整数 A,B,C,D，并计算 (A×B−C×D) 的值。</p>
+<p><strong>输入格式</strong><br>输入共四行，第一行包含整数 A，第二行包含整数 B，第三行包含整数 C，第四行包含整数 D。</p>
+<p><strong>输出格式</strong><br>输出格式为 DIFERENCA &#x3D; X，其中 X 为 (A×B−C×D) 的结果。</p>
+<p><strong>数据范围</strong><br>−10000≤A,B,C,D≤10000</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DIFERENCA = -26</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-4"><a href="#二、代码示例-4" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-06 20:54:04</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span>  A, B, C, D, DIFERENCA = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; A &gt;&gt; B &gt;&gt; C &gt;&gt; D;</span><br><span class="line">    DIFERENCA = ( A*B - C*D );</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;DIFERENCA = &quot;</span> &lt;&lt; DIFERENCA &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="6-AcWing-609-工资"><a href="#6-AcWing-609-工资" class="headerlink" title="6. AcWing 609. 工资"></a>6. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/611/">AcWing 609. 工资</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-5"><a href="#一、题目描述-5" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>请编写一个程序，可以读取一名员工的员工编号，本月工作总时长（小时）以及时薪，并输出他的工资条，工资条中包括员工编号和员工月收入。</p>
+<p><strong>输入格式</strong><br>输入包含两个整数和一个浮点数，分别代表员工编号，工作时长以及时薪。<br>每个数占一行。</p>
+<p><strong>输出格式</strong><br>输出共两行，第一行格式为 NUMBER &#x3D; X，其中 X 为员工编号。<br>第二行格式为 SALARY &#x3D; U$ Y，其中 Y 为该员工月收入，保留两位小数。</p>
+<p><strong>数据范围</strong><br>1≤员工编号≤100,<br>1≤总工作时长≤200,<br>1≤时薪≤50</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">25</span><br><span class="line">100</span><br><span class="line">5.50</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">NUMBER = 25</span><br><span class="line">SALARY = U$ 550.00</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-5"><a href="#二、代码示例-5" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-06 20:59:13</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> NUMBER, HOUR;</span><br><span class="line">    <span class="type">double</span> SALARY;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; NUMBER &gt;&gt; HOUR &gt;&gt; SALARY;</span><br><span class="line">    SALARY = HOUR*SALARY;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;NUMBER = &quot;</span> &lt;&lt; NUMBER &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;SALARY = U$ &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; SALARY &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="7-AcWing-610-工资和奖金"><a href="#7-AcWing-610-工资和奖金" class="headerlink" title="7. AcWing 610. 工资和奖金"></a>7. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/612/">AcWing 610. 工资和奖金</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-6"><a href="#一、题目描述-6" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>请你编写一个程序，给定你一个销售人员的名字，底薪以及月销售额。<br>请你计算他的月收入是多少。<br>已知月收入等于底薪加 15% 的月销售额。<br>所有数据保留两位小数。</p>
+<p><strong>输入格式</strong><br>输入第一行包含一个由大写字母构成的长度不超过 10 的字符串，表示销售人员的名字。<br>第二行包含一个浮点数，表示该人员的底薪。<br>第三行包含一个浮点数，表示该人员的月销售额。</p>
+<p><strong>输出格式</strong><br>输出格式为 TOTAL &#x3D; R$ X，X 为该人员月收入。</p>
+<p><strong>数据范围</strong><br>0≤底薪，月销售额≤10000.00</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">JOAO</span><br><span class="line">500.00</span><br><span class="line">1000.00</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">TOTAL = R$ 650.00</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、错误代码"><a href="#二、错误代码" class="headerlink" title="二、错误代码"></a>二、错误代码</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-06 21:03:52</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string NAME[<span class="number">10</span>];</span><br><span class="line">    <span class="type">double</span> a, b, TOTAL = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; NAME[<span class="number">10</span>] &gt;&gt; a &gt;&gt; b;</span><br><span class="line"></span><br><span class="line">    TOTAL = a + b*<span class="number">0.15</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;TOTAL = R$ &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; TOTAL &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>错误提示：</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Segmentation Fault   </span><br></pre></td></tr></table></figure>
+
+<p>在第9行，使用 cin 读取了 NAME[10]，但是数组只有 10 个元素，从 0 到 9，所以应该用 NAME[9] 而不是 NAME[10]。</p>
+<p>另外，在输入a和b之前，没有检查是否成功读取到了字符串，如果用户没有输入任何内容就直接按回车键，可能会导致 cin 流进入异常状态，需要使用 cin.clear() 和 cin.ignore() 来清除错误状态并跳过当前行的剩余字符。</p>
+<h2 id="三、代码示例"><a href="#三、代码示例" class="headerlink" title="三、代码示例"></a>三、代码示例</h2><h3 id="（1）在-错误代码-的基础上修改"><a href="#（1）在-错误代码-的基础上修改" class="headerlink" title="（1）在 错误代码 的基础上修改"></a>（1）在 <code>错误代码</code> 的基础上修改</h3><p>虽然 <strong>Accepted</strong> 了，<strong>但是这种写法也是错的！！！</strong>，详情见总结。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string NAME[<span class="number">10</span>];</span><br><span class="line">    <span class="type">double</span> a, b, TOTAL = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; NAME[<span class="number">9</span>]; <span class="comment">// 修改为NAME[9]</span></span><br><span class="line">    <span class="keyword">if</span> (!cin) &#123;     <span class="comment">// 检查是否成功读取到字符串</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Error: failed to read name.&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="keyword">if</span> (!cin) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Error: failed to read values for a and b.&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    TOTAL = a + b*<span class="number">0.15</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;TOTAL = R$ &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; TOTAL &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Segmentation fault</strong>（段错误）通常是因为 <strong>程序试图访问不属于自己的内存区域，或者试图执行非法操作导致的。</strong> C++中，可能的原因包括但不限于：</p>
+<blockquote>
+<ul>
+<li>访问数组越界</li>
+<li>使用未初始化的指针</li>
+<li>动态分配内存失败</li>
+</ul>
+</blockquote>
+<p>这样可以避免出现Segmentation Fault的问题，并且增加了对输入错误的处理。</p>
+<h3 id="（2）把-10-给去掉"><a href="#（2）把-10-给去掉" class="headerlink" title="（2）把 [10] 给去掉"></a>（2）把 <strong>[10]</strong> 给去掉</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string NAME;</span><br><span class="line">    <span class="type">double</span> a, b, TOTAL = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; NAME &gt;&gt; a &gt;&gt; b;      <span class="comment">// cin 输入字符串方便</span></span><br><span class="line">    </span><br><span class="line">    TOTAL = a + b*<span class="number">0.15</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;TOTAL = R$ &quot;</span> &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; TOTAL &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="（3）使用字符数组-char-a-10"><a href="#（3）使用字符数组-char-a-10" class="headerlink" title="（3）使用字符数组 char a[10]"></a>（3）使用字符数组 <code>char a[10]</code></h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> a[<span class="number">10</span>];</span><br><span class="line">    <span class="type">double</span> b, c;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s %lf %lf&quot;</span>, a, &amp;b, &amp;c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;TOTAL = R$ %.2lf&quot;</span>, b + c * <span class="number">0.15</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><h3 id="（1）关于使用-NAME-10-会Segmentation-fault（段错误）"><a href="#（1）关于使用-NAME-10-会Segmentation-fault（段错误）" class="headerlink" title="（1）关于使用 NAME[10] 会Segmentation fault（段错误）"></a>（1）关于使用 <code>NAME[10]</code> 会Segmentation fault（段错误）</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">string NAME[<span class="number">10</span>];</span><br><span class="line"><span class="type">double</span> a, b, TOTAL = <span class="number">0</span>;</span><br><span class="line">cin &gt;&gt; NAME[<span class="number">10</span>] &gt;&gt; a &gt;&gt; b;</span><br></pre></td></tr></table></figure>
+
+<p>先来复习一下段错误：</p>
+<blockquote>
+<p><strong>Segmentation fault</strong>（段错误）通常是因为 <strong>程序试图访问不属于自己的内存区域，或者试图执行非法操作导致的。</strong> C++中，可能的原因包括但不限于：</p>
+<blockquote>
+<ul>
+<li>访问数组越界</li>
+<li>使用未初始化的指针</li>
+<li>动态分配内存失败</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><code>string NAME[10];</code> 声明了一个包含 10 个字符串的数组，而 <code>cin &gt;&gt; NAME[10] &gt;&gt; a &gt;&gt; b;</code> 尝试读取输入到 NAME[10]，这是数组的第11个元素（在C++中，数组是从零开始索引的），这是错误的！</p>
+<h3 id="（2）关于第一种修改也是错误的原因"><a href="#（2）关于第一种修改也是错误的原因" class="headerlink" title="（2）关于第一种修改也是错误的原因"></a>（2）关于第一种修改也是错误的原因</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">string NAME[<span class="number">10</span>];</span><br><span class="line"><span class="type">double</span> a, b, TOTAL = <span class="number">0</span>;</span><br><span class="line">cin &gt;&gt; NAME[<span class="number">9</span>] &gt;&gt; a &gt;&gt; b;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-关于-Accepted-的原因"><a href="#1-关于-Accepted-的原因" class="headerlink" title="1. 关于 Accepted 的原因"></a>1. 关于 <strong>Accepted</strong> 的原因</h4><blockquote>
+<p><code>string NAME[10]</code> 声明了一个包含 10 个字符串的的数组（不是字符数组），每一个都可以存储字符串；而<code>cin &gt;&gt; NAME[9]</code> 是把输入的字符串存到数组的第 10 个元素中，即 <code>NAME[9]</code> —— 是有效的。</p>
+</blockquote>
+<h4 id="2-关于这种写法为什么是错的原因"><a href="#2-关于这种写法为什么是错的原因" class="headerlink" title="2. 关于这种写法为什么是错的原因"></a>2. 关于这种写法为什么是错的原因</h4><blockquote>
+<p>这种做法可能会导致代码的可读性降低，因为此题中 NAME 是一个单一的<strong>字符串</strong>而不是一个<strong>字符串数组</strong>。通常情况下，如果只需要一个字符串，直接声明一个 string 类型的变量会更清晰。</p>
+</blockquote>
+<h3 id="（3）C-中-string-的一些用法"><a href="#（3）C-中-string-的一些用法" class="headerlink" title="（3）C++中 string 的一些用法"></a>（3）C++中 string 的一些用法</h3><blockquote>
+<ol>
+<li>在C++中，使用 <code>string</code> 类型时，不需要指定大小——因为 <code>string</code> 类会根据实际存储的字符动态调整大小。这是 <code>string</code> 类的一个优势，因为它能够自动处理字符串的大小变化，无需手动管理内存。</li>
+<li>当在C++中声明 string name[10]; 时，声明的是一个包含 10 个 <code>string</code> 对象的数组，而不是字符数组。<strong>数组中的每个元素（<code>name[0]</code> 到 <code>name[9]</code>）都是一个独立的 <code>string</code> 对象，可以容纳一系列字符。</strong></li>
+<li>在C++中，<code>string</code> 是标准库提供的一个类，表示一系列字符，与传统的字符数组不同。<code>string</code> 类提供了更多的功能，通常比传统的字符数组更方便和安全。<br>因此，通常的做法是直接声明一个 <code>string</code> 变量，而不是一个固定大小的字符串数组。</li>
+</ol>
+</blockquote>
+<h3 id="（4）C-中关于数组和单一变量的声明的区别"><a href="#（4）C-中关于数组和单一变量的声明的区别" class="headerlink" title="（4）C++中关于数组和单一变量的声明的区别"></a>（4）C++中关于数组和单一变量的声明的区别</h3><ol>
+<li><code>string name[10];</code> ：</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">string name[<span class="number">10</span>];  <span class="comment">// 定义一个包含10个字符串的数组</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>这是一个包含 10 个字符串的数组的声明。数组的每个元素都可以存储一个独立的字符串。</li>
+<li>数组的索引是从0到9，因此有效的访问范围是 name[0] 到 name[9]。</li>
+<li>适用于需要存储多个字符串的情况，每个字符串对应一个数组元素。</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li><code>string name;</code> ：</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">string name;  <span class="comment">// 定义一个单一字符串变量</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>一个单一的字符串变量的声明。只能存储一个字符串。</li>
+<li>适用于只需要存储一个字符串的情况。</li>
+</ul>
+</blockquote>
+<ul>
+<li>相同点：</li>
+</ul>
+<blockquote>
+<p>两者都是用来存储字符串的。<br>在编写代码时，可以使用相似的语法来操作，例如使用 cin 读取输入，或者使用 cout 打印输出。</p>
+</blockquote>
+<ul>
+<li>区别：</li>
+</ul>
+<blockquote>
+<p><code>string name[10];</code> 是一个包含多个字符串的数组，每个元素都是一个独立的字符串。<br><code>string name;</code> 是一个单一的字符串变量，只能存储一个字符串。</p>
+</blockquote>
+<p>根据需求，选择数组或者单一变量取决于是需要处理多个字符串还是单一字符串。</p>
+<h3 id="（5）常用头文件"><a href="#（5）常用头文件" class="headerlink" title="（5）常用头文件"></a>（5）常用头文件</h3><p>头文件：</p>
+<ul>
+<li><code>#include &lt;iostream&gt;</code> 包括cin &#x2F; cout &#x2F; scanf &#x2F; printf</li>
+<li><code>#inlcude &lt;cstdio&gt;</code> 包括scanf &#x2F; printf<br>  其中，cstdio编译速度比iostream快</li>
+<li><code>#include &lt;cmath&gt;</code> 包括常用数学公式，如<blockquote>
+<ul>
+<li>double sqrt(double x);</li>
+<li>double pow(double x, double y);</li>
+<li>long int abs(long int x);</li>
+<li>double fabs(double x);</li>
+</ul>
+</blockquote>
+</li>
+<li>万能头文件 <code>#include &lt;bits/stdc++.h&gt;</code></li>
+</ul>
+<hr>
+<hr>
+<h1 id="8-AcWing-611-简单计算"><a href="#8-AcWing-611-简单计算" class="headerlink" title="8. AcWing 611. 简单计算"></a>8. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/613/">AcWing 611. 简单计算</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-7"><a href="#一、题目描述-7" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>给定你两个产品的产品编号，产品数量以及产品单价。<br>请你计算买下两种产品一共需要花费多少钱。</p>
+<p><strong>输入格式</strong><br>输入共两行。<br>每行包含两个整数以及一个浮点数，表示其中一件产品的产品编号，产品数量以及产品单价。</p>
+<p><strong>输出格式</strong><br>输出格式为 VALOR A PAGAR: R$ X，其中 X 为产品总价值，保留两位小数。</p>
+<p><strong>数据范围</strong><br>1≤产品编号,产品数量≤10000,<br>1.00≤产品单价≤10000.00</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">12 1 5.30</span><br><span class="line">16 2 5.10</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">VALOR A PAGAR: R$ 15.50</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-6"><a href="#二、代码示例-6" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-07 13:41:15</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a1, b1, a2, b2;</span><br><span class="line">    <span class="type">double</span> c1, c2;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; a1 &gt;&gt; b1 &gt;&gt; c1;</span><br><span class="line">    cin &gt;&gt; a2 &gt;&gt; b2 &gt;&gt; c2;</span><br><span class="line"></span><br><span class="line">    <span class="type">double</span> sum = b1*c1 + b2*c2;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;VALOR A PAGAR: R$ %.2lf\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="9-AcWing-612-球的体积"><a href="#9-AcWing-612-球的体积" class="headerlink" title="9. AcWing 612. 球的体积"></a>9. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/614/">AcWing 612. 球的体积</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-8"><a href="#一、题目描述-8" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>给定你一个球体的半径 R，请你计算球体的体积。<br>计算球体的公式为 V&#x3D;(4&#x2F;3)∗π∗R^3。<br>π 取 3.14159。</p>
+<p>注意：有些语言中 (4&#x2F;3) 无法得到 1.3333…，建议在公式中使用 (4&#x2F;3.0)。</p>
+<p><strong>输入格式</strong><br>输入一个整数 R。</p>
+<p><strong>输出格式</strong><br>输出格式为 VOLUME &#x3D; X，其中 X 为球体的体积，结果保留三位小数。</p>
+<p><strong>数据范围</strong><br>1≤R≤2000</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">VOLUME = 113.097</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-7"><a href="#二、代码示例-7" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><p><strong>需要注意一点：(4 &#x2F; 3) 得不到1.333333···，要使用 (4 &#x2F; 3.0)</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-07 13:48:30</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> r;</span><br><span class="line">    cin &gt;&gt; r;</span><br><span class="line">    </span><br><span class="line">    <span class="type">double</span> v = <span class="number">4</span> / <span class="number">3.0</span> * PI * r * r * r;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;VOLUME = %.3lf\n&quot;</span>, v);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="10-AcWing-613-面积"><a href="#10-AcWing-613-面积" class="headerlink" title="10. AcWing 613. 面积"></a>10. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/615/">AcWing 613. 面积</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-9"><a href="#一、题目描述-9" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>给定三个浮点数 A，B 和 C。<br>然后，计算如下图形的面积：</p>
+<p>底边为 A，高为 C 的三角形。<br>半径 C 的圆。（π&#x3D;3.14159）<br>底边为 A 和 B，高为 C 的梯形。<br>边长为 B 的正方形。<br>边长为 A 和 B 的长方形。</p>
+<p><strong>输入格式</strong><br>输入共一行，包含三个保留一位小数的浮点数 A，B，C。</p>
+<p><strong>输出格式</strong><br>输出共五行，形式如下所示：</p>
+<p>第一行，格式为 TRIANGULO: X，其中 X 为所求三角形面积。<br>第二行，格式为 CIRCULO: X，其中 X 为所求圆形面积。<br>第三行，格式为 TRAPEZIO: X，其中 X 为所求梯形面积。<br>第四行，格式为 QUADRADO: X，其中 X 为所求正方形面积。<br>第五行，格式为 RETANGULO: X，其中 X 为所求长方形面积。</p>
+<p>所有答案保留三位小数。</p>
+<p><strong>数据范围：</strong></p>
+<p>0≤A,B,C≤10000.0</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3.0 4.0 5.2</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">TRIANGULO: 7.800</span><br><span class="line">CIRCULO: 84.949</span><br><span class="line">TRAPEZIO: 18.200</span><br><span class="line">QUADRADO: 16.000</span><br><span class="line">RETANGULO: 12.000</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-8"><a href="#二、代码示例-8" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-09 20:57:32</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> a, b, c;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">    </span><br><span class="line">    <span class="type">double</span> ans1 = a * c *<span class="number">0.5</span>;</span><br><span class="line">    <span class="type">double</span> ans2 = PI * c * c;</span><br><span class="line">    <span class="type">double</span> ans3 = (a + b) * c * <span class="number">0.5</span>;</span><br><span class="line">    <span class="type">double</span> ans4 = b * b;</span><br><span class="line">    <span class="type">double</span> ans5 = a *b;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;TRIANGULO: %.3lf\n&quot;</span>, ans1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;CIRCULO: %.3lf\n&quot;</span>, ans2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;TRAPEZIO: %.3lf\n&quot;</span>, ans3);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;QUADRADO: %.3lf\n&quot;</span>, ans4);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;RETANGULO: %.3lf\n&quot;</span>, ans5);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="11-AcWing-614-最大值"><a href="#11-AcWing-614-最大值" class="headerlink" title="11. AcWing 614. 最大值"></a>11. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/616/">AcWing 614. 最大值</a></h1><blockquote>
+<p><strong>【中等】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-10"><a href="#一、题目描述-10" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>给定三个整数，请你找出它们中的最大值。<br>下列公式可能对你有所帮助：<br>max(a,b) &#x3D; ( a + b + abs( a − b ) ) &#x2F; 2</p>
+<p><strong>输入格式</strong><br>输入占一行，包含三个整数。</p>
+<p><strong>输出格式</strong><br>输出格式为 X eh o maior，其中 X 为三个数中的最大值。</p>
+<p><strong>数据范围</strong><br>1≤给定整数≤109</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7 14 106</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">106 eh o maior</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-9"><a href="#二、代码示例-9" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><p><strong>求两个数的最大值：max(a,b)&#x3D;(a+b+abs(a−b))&#x2F;2</strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-09 21:09:45</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// max(a,b)=(a+b+abs(a−b))/2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b, c;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">    <span class="type">int</span> max = (a + b + <span class="built_in">abs</span>(a - b)) / <span class="number">2</span>;</span><br><span class="line">    max = (max + c + <span class="built_in">abs</span>(max - c)) / <span class="number">2</span>;</span><br><span class="line">    cout &lt;&lt; max &lt;&lt; <span class="string">&quot; eh o maior&quot;</span> &lt;&lt;endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="12-AcWing-615-油耗"><a href="#12-AcWing-615-油耗" class="headerlink" title="12. AcWing 615. 油耗"></a>12. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/617/">AcWing 615. 油耗</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-11"><a href="#一、题目描述-11" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>给定一个汽车行驶的总路程（km）和消耗的油量（l），请你求出汽车每消耗 1 升汽油可行驶多少公里路程。</p>
+<p><strong>输入格式</strong><br>输入共两行，第一行包含整数 X，表示行驶总路程。<br>第二行包含保留一位小数的浮点数 Y，表示消耗的油量。</p>
+<p><strong>输出格式</strong><br>输出格式为 M km&#x2F;l，其中 M 为计算结果，保留三位小数。</p>
+<p><strong>数据范围</strong><br>1≤X,Y≤109</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">500</span><br><span class="line">35.0</span><br></pre></td></tr></table></figure>
+
+<p>输出样例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">14.286 km/l</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-10"><a href="#二、代码示例-10" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-09 21:15:11</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">double</span> y;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">    <span class="type">double</span> m = x / y;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.3lf km/l\n&quot;</span>, m);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="13-AcWing-616-两点间的距离"><a href="#13-AcWing-616-两点间的距离" class="headerlink" title="13. AcWing 616. 两点间的距离"></a>13. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/618/">AcWing 616. 两点间的距离</a></h1><blockquote>
+<p><strong>【简单】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-12"><a href="#一、题目描述-12" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>给定两个点 P1 和 P2，其中 P1 的坐标为 (x1,y1)，P2 的坐标为 (x2,y2)，请你计算两点间的距离是多少。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picss.sunbangyan.cn/2023/12/11/f50363a4cef73470ba9a18e6bb05915c.jpeg" alt="100" style="zoom:100%"/></p>
+<p><strong>输入格式</strong><br>输入共两行，每行包含两个双精度浮点数 xi,yi，表示其中一个点的坐标。<br>输入数值均保留一位小数。</p>
+<p><strong>输出格式</strong><br>输出你的结果，保留四位小数。</p>
+<p><strong>数据范围</strong><br>−109≤xi,yi≤109</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.0 7.0</span><br><span class="line">5.0 9.0</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4.4721</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、代码示例-11"><a href="#二、代码示例-11" class="headerlink" title="二、代码示例"></a>二、代码示例</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief: </span></span><br><span class="line"><span class="comment"> * @version:  </span></span><br><span class="line"><span class="comment"> * @author: @Shiel</span></span><br><span class="line"><span class="comment"> * @date: 2023-12-09 21:18:06</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> x1, y1, x2, y2;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;</span><br><span class="line">    <span class="type">double</span> d = <span class="built_in">sqrt</span>( ( (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) ) );</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.4lf\n&quot;</span>, d);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="14-617-距离"><a href="#14-617-距离" class="headerlink" title="14. 617. 距离"></a>14. <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/619/">617. 距离</a></h1><blockquote>
+<p><strong>【中等】顺序结构</strong></p>
+</blockquote>
+<h2 id="一、题目描述-13"><a href="#一、题目描述-13" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><p>两辆汽车在同一地点，同时，沿同一方向前进。<br>一辆车的速度为 60 km&#x2F;h，另一辆车的速度为 90 km&#x2F;h。<br>显然，快车与慢车的距离会不断拉开，每过一个小时（60 分钟），两车的距离就拉开 30 公里。<br>现在，告诉你两车之间的距离为 L 公里，请你求出两车已经行驶了多长时间？</p>
+<p><strong>输入格式</strong><br>输入包含一个整数 L，表示两车之间的距离。</p>
+<p><strong>输出格式</strong><br>输出格式为 X minutos，其中 X 为已经行驶的时间，单位为分钟。</p>
+<p><strong>数据范围</strong><br>1≤L≤109</p>
+<p><strong>输入样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">30</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出样例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">60 minutos</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、错误代码-1"><a href="#二、错误代码-1" class="headerlink" title="二、错误代码"></a>二、错误代码</h2><p><strong>题目并没有直接说 x 的变量类型</strong></p>
+<h3 id="（1）int-x-l-30-60"><a href="#（1）int-x-l-30-60" class="headerlink" title="（1）int x = (l / 30) * 60;"></a>（1）<code>int x = (l / 30) * 60;</code></h3><p>下面这种和第（2）种一样，因为向下取整 + 整个表达式 都是整数，所以int 和 double 一样</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> l;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; l;</span><br><span class="line">    <span class="type">int</span> x = (l / <span class="number">30</span>) * <span class="number">60</span>;</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; <span class="string">&quot; minutos&quot;</span> &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>代码提交状态： <strong>Wrong Answer</strong><br>代码运行状态： <strong>错误数据如下所示</strong></p>
+<p><strong>输入</strong></p>
+<blockquote>
+<p>489</p>
+</blockquote>
+<p><strong>输出</strong></p>
+<blockquote>
+<p>960 minutos</p>
+</blockquote>
+<p><strong>标准答案</strong></p>
+<blockquote>
+<p>978 minutos</p>
+</blockquote>
+<p><strong>运行时间</strong>：2ms</p>
+</blockquote>
+<h3 id="（2）double-x-l-30-60"><a href="#（2）double-x-l-30-60" class="headerlink" title="（2）double x = (l / 30) * 60;"></a>（2）<code>double x = (l / 30) * 60;</code></h3><p>同第（1）种错误</p>
+<blockquote>
+<p>代码提交状态： <strong>Wrong Answer</strong><br>代码运行状态： <strong>错误数据如下所示</strong></p>
+<p><strong>输入</strong></p>
+<blockquote>
+<p>489</p>
+</blockquote>
+<p><strong>输出</strong></p>
+<blockquote>
+<p>960 minutos</p>
+</blockquote>
+<p><strong>标准答案</strong></p>
+<blockquote>
+<p>978 minutos</p>
+</blockquote>
+<p><strong>运行时间</strong>：2ms</p>
+</blockquote>
+<h3 id="（3）double-x-l-30-0-60"><a href="#（3）double-x-l-30-0-60" class="headerlink" title="（3）double x = (l / 30.0) * 60;"></a>（3）<code>double x = (l / 30.0) * 60;</code></h3><p>可以看出，题目输出是整数，即没有小数，所以小数位设置为 0 即可。</p>
+<blockquote>
+<p>代码提交状态： <strong>Wrong Answer</strong><br>代码运行状态： <strong>错误数据如下所示</strong></p>
+<p><strong>输入</strong></p>
+<blockquote>
+<p>596933032</p>
+</blockquote>
+<p><strong>输出</strong></p>
+<blockquote>
+<p>1.19387e+09 minutos</p>
+</blockquote>
+<p><strong>标准答案</strong></p>
+<blockquote>
+<p>1193866064 minutos</p>
+</blockquote>
+<p><strong>运行时间</strong>：2ms</p>
+</blockquote>
+<h2 id="三、代码示例-1"><a href="#三、代码示例-1" class="headerlink" title="三、代码示例"></a>三、代码示例</h2><h3 id="1-把小数位改为0"><a href="#1-把小数位改为0" class="headerlink" title="1. 把小数位改为0"></a>1. 把小数位改为0</h3><blockquote>
+<p>C++ 中控制小数位还可以：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">cout.<span class="built_in">setf</span>(ios_base::fixed);</span><br><span class="line">cout.<span class="built_in">precision</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这样子只需要改一个数字就好，不过感觉还是 <code>printf</code> 方便?&gt;······</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> l;</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; l;</span><br><span class="line">    <span class="type">double</span> x = (l / <span class="number">30.0</span>) * <span class="number">60</span>;</span><br><span class="line">    cout.<span class="built_in">setf</span>(ios_base::fixed);</span><br><span class="line">    cout.<span class="built_in">precision</span>(<span class="number">0</span>);</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; <span class="string">&quot; minutos&quot;</span> &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-使用位运算-n-1"><a href="#2-使用位运算-n-1" class="headerlink" title="2. 使用位运算 n &lt;&lt; 1"></a>2. 使用位运算 <code>n &lt;&lt; 1</code></h3><p><em><strong>位运算效率超高的~</strong></em></p>
+<blockquote>
+<ul>
+<li>仔细观察题目数据：30 km → 60 minutes</li>
+<li>也就是说：<strong>乘2</strong> 就完事了！</li>
+</ul>
+</blockquote>
+<p>所以使用位运算是比较好的一种方法。</p>
+<blockquote>
+<p>左移运算（&lt;&lt;）是一种位运算，用于将一个二进制数的所有位向左移动指定的位数。在左移运算中，右侧用零填充。</p>
+<p>对于一个二进制数 x，左移运算 x &lt;&lt; n 表示将 x 的所有位向左移动 n 位。每一位都向左移动，而右侧用 0 填充。左移操作实际上相当于将原数乘以 2 的 n 次方。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d minutos&quot;</span>, n &lt;&lt; <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-直接-n-0-5"><a href="#3-直接-n-0-5" class="headerlink" title="3. 直接 n / 0.5"></a>3. 直接 <code>n / 0.5</code></h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//快车与慢车拉开的距离 0.5公里/min</span></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    cout.<span class="built_in">setf</span>(ios_base::fixed);</span><br><span class="line">    cout.<span class="built_in">precision</span>(<span class="number">0</span>);</span><br><span class="line">    cout&lt;&lt;n/<span class="number">0.5</span>&lt;&lt;<span class="string">&quot; minutos&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、小结"><a href="#四、小结" class="headerlink" title="四、小结"></a>四、小结</h1><h2 id="1-仔细观察数据"><a href="#1-仔细观察数据" class="headerlink" title="1. 仔细观察数据"></a>1. 仔细观察数据</h2><p>就跟数学题一样，仔细观察数据之间的关系。</p>
+<hr>
+<h2 id="2-位运算"><a href="#2-位运算" class="headerlink" title="2. 位运算"></a>2. 位运算</h2><p>位运算是一种在计算机中操作二进制位的技术。它使用位（0和1）来执行各种操作，如移位、与、或、异或等。位运算通常用于处理底层的数据存储和操作，例如在嵌入式系统、图形处理、密码学等领域。</p>
+<ul>
+<li><p>常见的位运算操作：</p>
+<blockquote>
+<ol>
+<li><p><strong>与运算（&amp;）</strong>：<br>  对应位都为1时，结果为1；否则，结果为0。<br>例如：1010 &amp; 1100 &#x3D; 1000</p>
+</li>
+<li><p><strong>或运算（|）</strong>：<br>  对应位有一个为1时，结果为1；否则，结果为0。<br>例如：1010 | 1100 &#x3D; 1110</p>
+</li>
+<li><p><strong>异或运算（^）</strong>：<br>  对应位相异时，结果为1；否则，结果为0。<br>例如：1010 ^ 1100 &#x3D; 0110</p>
+</li>
+<li><p><strong>取反运算（~）</strong>：<br>  对每个位取反，即0变为1，1变为0。<br>例如：~1010 &#x3D; 0101</p>
+</li>
+<li><p><strong>左移运算（&lt;&lt;）</strong>：<br>  将二进制数左移指定位数，右侧补0。<br>例如：1010 &lt;&lt; 2 &#x3D; 1000</p>
+</li>
+<li><p><strong>右移运算（&gt;&gt;）</strong>：<br>  将二进制数右移指定位数，左侧根据符号位补0或补1。<br>例如：1010 &gt;&gt; 2 &#x3D; 0010</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li><p><strong>位运算可以在某些情况下提高代码的效率，尤其是对于一些需要高性能的场景。在使用位运算时，需要了解二进制数的表示和运算规则，并谨慎处理符号位（对于有符号整数）。</strong></p>
+</li>
+<li><p><strong>这些位运算符可以用于整数类型（如int、long等）的操作。要特别注意在使用右移运算符时，对于有符号整数，可能会根据实现方式产生符号位的填充，这可能导致不同的结果。因此，在使用右移运算时，要确保理解底层实现和符号位的影响。</strong></p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li><p>位运算的优势</p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li><p><strong>效率：</strong> 位运算是在硬件层面上进行的操作，通常比算术运算更快。对于一些对性能要求较高的应用，如嵌入式系统、图形处理、密码学等领域，使用位运算可以提高代码的执行效率。</p>
+</li>
+<li><p><strong>节省空间：</strong> 位运算可以用较少的位数表示信息，从而减小数据占用的空间。这在存储大量二进制数据时尤为重要。例如，使用位掩码可以将多个布尔值压缩到一个整数中，从而减少内存占用。</p>
+</li>
+<li><p><strong>逻辑清晰：</strong> 在一些算法和数据结构中，使用位运算可以使代码更加简洁和直观。例如，使用位运算来检查某个数是否是2的幂次方，可以用一行代码完成，而不需要使用乘法或除法等运算。</p>
+</li>
+<li><p><strong>位掩码和标志位：</strong> 位运算常用于创建位掩码（bitmask）和处理标志位（flags）。通过位掩码，可以使用一个整数来表示多个布尔状态，从而减小存储和传输开销。</p>
+</li>
+<li><p><strong>加密和哈希算法：</strong> 位运算在密码学和哈希算法中经常用到，因为它们能够以比较底层的方式处理二进制数据，提供高效的加密和哈希操作。</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>尽管位运算在某些场景下具有优势，但在编写代码时，也要注意代码的可读性和可维护性。过度使用位运算可能会导致代码难以理解，从而降低代码的质量。因此，在选择是否使用位运算时，需要权衡代码的性能需求和代码的清晰度。</strong></p>
+</blockquote>
+</blockquote>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picdl.sunbangyan.cn/2023/11/24/b45e6fde93484c373c0976fab70d6963.jpeg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picdl.sunbangyan.cn/2023/11/24/b45e6fde93484c373c0976fab70d6963.jpeg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Akari</div><div class="post-copyright__author_desc">为什么要演奏春日影！</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/posts/24210/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/posts/24210/')">AcWing C++语法基础课 Week1 变量、表达式与顺序语句</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/posts/24210/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=AcWing C++语法基础课 Week1 变量、表达式与顺序语句&amp;url=http://example.com/posts/24210/&amp;pic=https://picdm.sunbangyan.cn/2023/12/09/7cb475fd5799bb645b863c2827d5dff7.jpeg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Akari的小站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/AcWing-C-%E5%9F%BA%E7%A1%80%E8%AF%BE/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AcWing C++基础课<span class="tagsPageCount">15</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://picdm.sunbangyan.cn/2023/12/09/7cb475fd5799bb645b863c2827d5dff7.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/posts/11281/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picss.sunbangyan.cn/2023/12/09/468986f57de99c9d854840b96a272304.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">unity传送带的简单实现</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/29328/" title="AcWing 610.工资和奖金"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-12-06</div><div class="title">AcWing 610.工资和奖金</div></div></a></div><div><a href="/posts/315/" title="AcWing 604.圆的面积"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-12-07</div><div class="title">AcWing 604.圆的面积</div></div></a></div><div><a href="/posts/9222/" title="AcWing 607.平均数2"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-12-07</div><div class="title">AcWing 607.平均数2</div></div></a></div><div><a href="/posts/5823/" title="AcWing 606.平均数1"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-12-07</div><div class="title">AcWing 606.平均数1</div></div></a></div><div><a href="/posts/59891/" title="AcWing 605.简单乘积"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-12-07</div><div class="title">AcWing 605.简单乘积</div></div></a></div><div><a href="/posts/56947/" title="AcWing 608.差"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-12-07</div><div class="title">AcWing 608.差</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Waline</span></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picdl.sunbangyan.cn/2023/11/24/b45e6fde93484c373c0976fab70d6963.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description">总有一天，每个人会和这个故事告别，走向不同的方向，独属于你自己的下一页。但是那样就好，累了的话就停下脚步，怀念的话就回来看看这个故事也一直都在。且行且看，尽力而为，不要害怕，不要后悔。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Akari</h1><div class="author-info__desc">为什么要演奏春日影！</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/akari2333" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-AcWing-604-%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF"><span class="toc-number">1.</span> <span class="toc-text">1. AcWing 604. 圆的面积</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.2.</span> <span class="toc-text">二、代码示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D"><span class="toc-number">1.2.2.</span> <span class="toc-text">第二种</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-AcWing-605-%E7%AE%80%E5%8D%95%E4%B9%98%E7%A7%AF"><span class="toc-number">2.</span> <span class="toc-text">2. AcWing 605. 简单乘积</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">2.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">2.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-AcWing-606-%E5%B9%B3%E5%9D%87%E6%95%B01"><span class="toc-number">3.</span> <span class="toc-text">3. AcWing 606. 平均数1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">3.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">3.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-AcWing-607-%E5%B9%B3%E5%9D%87%E6%95%B02"><span class="toc-number">4.</span> <span class="toc-text">4. AcWing 607. 平均数2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">4.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-3"><span class="toc-number">4.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-AcWing-608-%E5%B7%AE"><span class="toc-number">5.</span> <span class="toc-text">5. AcWing 608. 差</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">5.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-4"><span class="toc-number">5.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-AcWing-609-%E5%B7%A5%E8%B5%84"><span class="toc-number">6.</span> <span class="toc-text">6. AcWing 609. 工资</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-5"><span class="toc-number">6.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-5"><span class="toc-number">6.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-AcWing-610-%E5%B7%A5%E8%B5%84%E5%92%8C%E5%A5%96%E9%87%91"><span class="toc-number">7.</span> <span class="toc-text">7. AcWing 610. 工资和奖金</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-6"><span class="toc-number">7.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81"><span class="toc-number">7.2.</span> <span class="toc-text">二、错误代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="toc-number">7.3.</span> <span class="toc-text">三、代码示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%9C%A8-%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81-%E7%9A%84%E5%9F%BA%E7%A1%80%E4%B8%8A%E4%BF%AE%E6%94%B9"><span class="toc-number">7.3.1.</span> <span class="toc-text">（1）在 错误代码 的基础上修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%8A%8A-10-%E7%BB%99%E5%8E%BB%E6%8E%89"><span class="toc-number">7.3.2.</span> <span class="toc-text">（2）把 [10] 给去掉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84-char-a-10"><span class="toc-number">7.3.3.</span> <span class="toc-text">（3）使用字符数组 char a[10]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-number">7.4.</span> <span class="toc-text">四、总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8-NAME-10-%E4%BC%9ASegmentation-fault%EF%BC%88%E6%AE%B5%E9%94%99%E8%AF%AF%EF%BC%89"><span class="toc-number">7.4.1.</span> <span class="toc-text">（1）关于使用 NAME[10] 会Segmentation fault（段错误）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%85%B3%E4%BA%8E%E7%AC%AC%E4%B8%80%E7%A7%8D%E4%BF%AE%E6%94%B9%E4%B9%9F%E6%98%AF%E9%94%99%E8%AF%AF%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">7.4.2.</span> <span class="toc-text">（2）关于第一种修改也是错误的原因</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%85%B3%E4%BA%8E-Accepted-%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">7.4.2.1.</span> <span class="toc-text">1. 关于 Accepted 的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%85%B3%E4%BA%8E%E8%BF%99%E7%A7%8D%E5%86%99%E6%B3%95%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E9%94%99%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">7.4.2.2.</span> <span class="toc-text">2. 关于这种写法为什么是错的原因</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89C-%E4%B8%AD-string-%E7%9A%84%E4%B8%80%E4%BA%9B%E7%94%A8%E6%B3%95"><span class="toc-number">7.4.3.</span> <span class="toc-text">（3）C++中 string 的一些用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89C-%E4%B8%AD%E5%85%B3%E4%BA%8E%E6%95%B0%E7%BB%84%E5%92%8C%E5%8D%95%E4%B8%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">7.4.4.</span> <span class="toc-text">（4）C++中关于数组和单一变量的声明的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E5%B8%B8%E7%94%A8%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-number">7.4.5.</span> <span class="toc-text">（5）常用头文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-AcWing-611-%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97"><span class="toc-number">8.</span> <span class="toc-text">8. AcWing 611. 简单计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-7"><span class="toc-number">8.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-6"><span class="toc-number">8.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-AcWing-612-%E7%90%83%E7%9A%84%E4%BD%93%E7%A7%AF"><span class="toc-number">9.</span> <span class="toc-text">9. AcWing 612. 球的体积</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-8"><span class="toc-number">9.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-7"><span class="toc-number">9.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-AcWing-613-%E9%9D%A2%E7%A7%AF"><span class="toc-number">10.</span> <span class="toc-text">10. AcWing 613. 面积</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-9"><span class="toc-number">10.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-8"><span class="toc-number">10.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-AcWing-614-%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="toc-number">11.</span> <span class="toc-text">11. AcWing 614. 最大值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-10"><span class="toc-number">11.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-9"><span class="toc-number">11.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-AcWing-615-%E6%B2%B9%E8%80%97"><span class="toc-number">12.</span> <span class="toc-text">12. AcWing 615. 油耗</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-11"><span class="toc-number">12.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-10"><span class="toc-number">12.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13-AcWing-616-%E4%B8%A4%E7%82%B9%E9%97%B4%E7%9A%84%E8%B7%9D%E7%A6%BB"><span class="toc-number">13.</span> <span class="toc-text">13. AcWing 616. 两点间的距离</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-12"><span class="toc-number">13.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-11"><span class="toc-number">13.2.</span> <span class="toc-text">二、代码示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#14-617-%E8%B7%9D%E7%A6%BB"><span class="toc-number">14.</span> <span class="toc-text">14. 617. 距离</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-13"><span class="toc-number">14.1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81-1"><span class="toc-number">14.2.</span> <span class="toc-text">二、错误代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89int-x-l-30-60"><span class="toc-number">14.2.1.</span> <span class="toc-text">（1）int x &#x3D; (l &#x2F; 30) * 60;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89double-x-l-30-60"><span class="toc-number">14.2.2.</span> <span class="toc-text">（2）double x &#x3D; (l &#x2F; 30) * 60;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89double-x-l-30-0-60"><span class="toc-number">14.2.3.</span> <span class="toc-text">（3）double x &#x3D; (l &#x2F; 30.0) * 60;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">14.3.</span> <span class="toc-text">三、代码示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%8A%8A%E5%B0%8F%E6%95%B0%E4%BD%8D%E6%94%B9%E4%B8%BA0"><span class="toc-number">14.3.1.</span> <span class="toc-text">1. 把小数位改为0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E4%BD%8D%E8%BF%90%E7%AE%97-n-1"><span class="toc-number">14.3.2.</span> <span class="toc-text">2. 使用位运算 n &lt;&lt; 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%9B%B4%E6%8E%A5-n-0-5"><span class="toc-number">14.3.3.</span> <span class="toc-text">3. 直接 n &#x2F; 0.5</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%B0%8F%E7%BB%93"><span class="toc-number">15.</span> <span class="toc-text">四、小结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%94%E7%BB%86%E8%A7%82%E5%AF%9F%E6%95%B0%E6%8D%AE"><span class="toc-number">15.1.</span> <span class="toc-text">1. 仔细观察数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-number">15.2.</span> <span class="toc-text">2. 位运算</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/24210/" title="AcWing C++语法基础课 Week1 变量、表达式与顺序语句"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picdm.sunbangyan.cn/2023/12/09/7cb475fd5799bb645b863c2827d5dff7.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AcWing C++语法基础课 Week1 变量、表达式与顺序语句"/></a><div class="content"><a class="title" href="/posts/24210/" title="AcWing C++语法基础课 Week1 变量、表达式与顺序语句">AcWing C++语法基础课 Week1 变量、表达式与顺序语句</a><time datetime="2023-12-19T07:28:53.000Z" title="发表于 2023-12-19 15:28:53">2023-12-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/11281/" title="unity传送带的简单实现"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picss.sunbangyan.cn/2023/12/09/468986f57de99c9d854840b96a272304.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="unity传送带的简单实现"/></a><div class="content"><a class="title" href="/posts/11281/" title="unity传送带的简单实现">unity传送带的简单实现</a><time datetime="2023-12-18T13:18:12.000Z" title="发表于 2023-12-18 21:18:12">2023-12-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/21169/" title="43. 连续存储数组的算法演示 之二"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picss.sunbangyan.cn/2023/12/09/b886c3ba3ca0057bda9df9aa07126c7c.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="43. 连续存储数组的算法演示 之二"/></a><div class="content"><a class="title" href="/posts/21169/" title="43. 连续存储数组的算法演示 之二">43. 连续存储数组的算法演示 之二</a><time datetime="2023-12-14T12:51:15.000Z" title="发表于 2023-12-14 20:51:15">2023-12-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/48904/" title="AcWing 617. 距离">AcWing 617. 距离</a><time datetime="2023-12-11T01:22:24.000Z" title="发表于 2023-12-11 09:22:24">2023-12-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/40778/" title="AcWing 616. 两点间的距离">AcWing 616. 两点间的距离</a><time datetime="2023-12-11T01:10:22.000Z" title="发表于 2023-12-11 09:10:22">2023-12-11</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2023 By <a class="footer-bar-link" href="/" title="Akari" target="_blank">Akari</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">9</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/ACGN/" style="font-size: 0.88rem;">ACGN<sup>1</sup></a><a href="/tags/AcWing-C-%E5%9F%BA%E7%A1%80%E8%AF%BE/" style="font-size: 0.88rem;">AcWing C++基础课<sup>15</sup></a><a href="/tags/C/" style="font-size: 0.88rem;">C<sup>1</sup></a><a href="/tags/C/" style="font-size: 0.88rem;">C#<sup>1</sup></a><a href="/tags/Java/" style="font-size: 0.88rem;">Java<sup>1</sup></a><a href="/tags/Markdown/" style="font-size: 0.88rem;">Markdown<sup>2</sup></a><a href="/tags/Unity/" style="font-size: 0.88rem;">Unity<sup>1</sup></a><a href="/tags/blog/" style="font-size: 0.88rem;">blog<sup>2</sup></a><a href="/tags/galgame/" style="font-size: 0.88rem;">galgame<sup>2</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>2</sup></a><a href="/tags/%E5%8F%91%E7%99%AB%E6%97%A5%E5%B8%B8/" style="font-size: 0.88rem;">发癫日常<sup>2</sup></a><a href="/tags/%E5%BD%92%E6%A1%A3%EF%BC%88%E6%8B%96%E6%9B%B4%E2%88%9A%EF%BC%89/" style="font-size: 0.88rem;">归档（拖更√）<sup>3</sup></a><a href="/tags/%E6%8E%92%E5%BA%8F%E5%92%8C%E6%9F%A5%E6%89%BE/" style="font-size: 0.88rem;">排序和查找<sup>3</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 0.88rem;">数据结构与算法<sup>12</sup></a><a href="/tags/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/" style="font-size: 0.88rem;">生活日常<sup>2</sup></a><a href="/tags/%E7%A9%BA-%E6%97%A0/" style="font-size: 0.88rem;">空_无<sup>5</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 0.88rem;">计算机组成原理<sup>1</sup></a><a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 0.88rem;">递归<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8923265151" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/playlist?id=8923265151&amp;userid=310905058&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/medium-zoom@1.0.8/dist/medium-zoom.min.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("11/03/2023 10:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.8",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Akari 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("11/03/2023 10:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+      img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+      img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://waline-blog-hxla8mye0-akari2333s-projects.vercel.app/',
+      region: 'ap-shanghai',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.21/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://waline-blog-hxla8mye0-akari2333s-projects.vercel.app/',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><script>(() => {
+  const initWaline = () => {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: '',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: true,
+    }, null))
+  }
+
+  const loadWaline = async () => {
+    if (typeof Waline === 'object') initWaline()
+    else {
+      await getCSS('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.css')
+      await getScript('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.js')
+      initWaline()
+    }
+  }
+
+  if ('Twikoo' === 'Waline' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://waline-blog-hxla8mye0-akari2333s-projects.vercel.app/',
+        region: 'ap-shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.21/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "visitor@anheyu.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
