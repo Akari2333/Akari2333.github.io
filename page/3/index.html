@@ -59,7 +59,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-12-21 11:00:24',
+  postUpdate: '2023-12-21 11:01:58',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -209,15 +209,15 @@ if (true) {
       </a>
     </div>
     
-    <div class="catalog-list-item" id="/categories/参考教程/">
-      <a href="/categories/参考教程/">
-        参考教程
-      </a>
-    </div>
-    
     <div class="catalog-list-item" id="/categories/空-无/">
       <a href="/categories/空-无/">
         空_无
+      </a>
+    </div>
+    
+    <div class="catalog-list-item" id="/categories/参考教程/">
+      <a href="/categories/参考教程/">
+        参考教程
       </a>
     </div>
     
@@ -233,6 +233,12 @@ if (true) {
       </a>
     </div>
     
+    <div class="catalog-list-item" id="/categories/Unity/">
+      <a href="/categories/Unity/">
+        Unity
+      </a>
+    </div>
+    
     <div class="catalog-list-item" id="/categories/AcWing/">
       <a href="/categories/AcWing/">
         AcWing
@@ -245,18 +251,12 @@ if (true) {
       </a>
     </div>
     
-    <div class="catalog-list-item" id="/categories/Unity/">
-      <a href="/categories/Unity/">
-        Unity
-      </a>
-    </div>
-    
     <div class="catalog-list-item" id="/categories/Java/">
       <a href="/categories/Java/">
         Java
       </a>
     </div>
-    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/posts/23318/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">408</div><a class="unvisited-post" href="/posts/23318/" title="静态 链式二叉树">未读</a></div><a class="article-title" href="/posts/23318/" title="静态 链式二叉树">静态 链式二叉树</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-20T03:14:24.000Z" title="发表于 2023-11-20 11:14:24">2023-11-20</time><span class="article-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; "></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-29T02:28:20.621Z" title="更新于 2023-11-29 10:28:20">2023-11-29</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%80%92%E5%BD%92/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>递归</span></a><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>数据结构与算法</span></a></span></div><div class="content">此为静态的链式二叉树。
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/posts/23318/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">408</div><a class="unvisited-post" href="/posts/23318/" title="静态 链式二叉树">未读</a></div><a class="article-title" href="/posts/23318/" title="静态 链式二叉树">静态 链式二叉树</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-20T03:14:24.000Z" title="发表于 2023-11-20 11:14:24">2023-11-20</time><span class="article-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; "></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-29T02:28:20.621Z" title="更新于 2023-11-29 10:28:20">2023-11-29</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>数据结构与算法</span></a><a class="article-meta__tags" href="/tags/%E9%80%92%E5%BD%92/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>递归</span></a></span></div><div class="content">此为静态的链式二叉树。
 /** *       A *   B       C *        D *            E **/# include &lt;stdio.h&gt;# include &lt;malloc.h&gt;typedef struct BTNode&#123;    char data; // 数据域    struct BTNode* pLchild; // 左子树指针域 p是指针 L是左孩子 R是右孩子    struct BTNode* pRchild; // 右子树指针域&#125;BTNODE, *PBTNODE;PBTNODE CreateBTree(void); // 创建二叉树，并返回二叉树根节点地址void PreTraverseBTree(struct BTNode * pT);   //先序遍历二叉树void InTraverseBTree(struct BTNode * pT);    //中序遍历二叉树void PostTraverseBTree(struct BTNode * pT);  //后续遍历二叉树int main( ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/posts/64630/')"><div class="post_cover left"><a href="/posts/64630/" title="萌新九宫格之首的全新解读：里界小CL——假如逝去之人不再归来" style="display: flex;height: 100%;"><img class="post_bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://picst.sunbangyan.cn/2023/12/09/079aeb1728a3ae7a5ad91651d8a3383a.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="萌新九宫格之首的全新解读：里界小CL——假如逝去之人不再归来" style="pointer-events: none"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">ACGN</div><a class="unvisited-post" href="/posts/64630/" title="萌新九宫格之首的全新解读：里界小CL——假如逝去之人不再归来">未读</a></div><a class="article-title" href="/posts/64630/" title="萌新九宫格之首的全新解读：里界小CL——假如逝去之人不再归来">萌新九宫格之首的全新解读：里界小CL——假如逝去之人不再归来</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-12T07:44:27.000Z" title="发表于 2023-11-12 15:44:27">2023-11-12</time><span class="article-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; "></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-10T12:33:19.019Z" title="更新于 2023-12-10 20:33:19">2023-12-10</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/galgame/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>galgame</span></a></span></div><div class="content">原文出处（已征得转载同意）：萌新九宫格之首的全新解读：里界小CL——假如逝去之人不再归来，破军歌姬 Galgame批评 2023-11-08 11:00
 （虽然这个gal我并没有玩过吧，但是作者的这篇文章让我想起了Clannad，已经看好多年了……）
 
@@ -276,7 +276,7 @@ if (true) {
 例题ZZULIOJ-Contest 1908-I: 混乱的成绩表
 Zero 是一名学习委员，他负责很多有关学习上的任务，今天辅导员给了他一张成绩单，这个成绩单是按学号排序的，但是它是成绩单，应该按成绩排序。Zero 作为一个 acmer，对排序还算了解，但他想考考你，你能完成这个任务吗？
 
-一个正整数 n，代表成绩单上学生的人数(n &lt;= 2000)接下来 n 行，每行两个整数 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/posts/53020/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">408</div><a class="unvisited-post" href="/posts/53020/" title="递归—汉诺塔">未读</a></div><a class="article-title" href="/posts/53020/" title="递归—汉诺塔">递归—汉诺塔</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-07T14:51:07.000Z" title="发表于 2023-11-07 22:51:07">2023-11-07</time><span class="article-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; "></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-29T02:24:07.178Z" title="更新于 2023-11-29 10:24:07">2023-11-29</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%80%92%E5%BD%92/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>递归</span></a><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>数据结构与算法</span></a></span></div><div class="content">57 _ 递归8 _ 汉诺塔_1_哔哩哔哩趁热打铁，记录下来，后续有什么再补充。
+一个正整数 n，代表成绩单上学生的人数(n &lt;= 2000)接下来 n 行，每行两个整数 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/posts/53020/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">408</div><a class="unvisited-post" href="/posts/53020/" title="递归—汉诺塔">未读</a></div><a class="article-title" href="/posts/53020/" title="递归—汉诺塔">递归—汉诺塔</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-07T14:51:07.000Z" title="发表于 2023-11-07 22:51:07">2023-11-07</time><span class="article-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; "></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-29T02:24:07.178Z" title="更新于 2023-11-29 10:24:07">2023-11-29</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>数据结构与算法</span></a><a class="article-meta__tags" href="/tags/%E9%80%92%E5%BD%92/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>递归</span></a></span></div><div class="content">57 _ 递归8 _ 汉诺塔_1_哔哩哔哩趁热打铁，记录下来，后续有什么再补充。
 问题引入：
 
 分析
@@ -293,7 +293,7 @@ C版本：/** * @brief:  * @version:   * @author: @Shiel * @date: 2023-11-7 22:1
 将姓名为“刘德华”的学生成绩改为95。
 输出成绩不及格的学生姓名。
 
-（3）现有以下三个email地址”&#122;&#x68;&#97;&#x6e;&#103;&#x73;&#x61;&#x6e;&#x40;&#x73;&#111;&#104;&#117;&#46;&#99;&#111;&#x6d;”、”&#10 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/posts/42877/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">408</div><a class="unvisited-post" href="/posts/42877/" title="二分查找">未读</a></div><a class="article-title" href="/posts/42877/" title="二分查找">二分查找</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-07T00:57:15.000Z" title="发表于 2023-11-07 08:57:15">2023-11-07</time><span class="article-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; "></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-09T10:09:58.458Z" title="更新于 2023-12-09 18:09:58">2023-12-09</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>数据结构与算法</span></a><a class="article-meta__tags" href="/tags/%E6%8E%92%E5%BA%8F%E5%92%8C%E6%9F%A5%E6%89%BE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>排序和查找</span></a></span></div><div class="content">观前提示：以下内容均为天王寺科技所属。与本人无任何联系。下集预告：十大排序——选择排序
+（3）现有以下三个email地址”&#122;&#104;&#x61;&#110;&#103;&#115;&#97;&#110;&#x40;&#x73;&#111;&#104;&#x75;&#46;&#99;&#111;&#109;”、”&#x6 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/posts/42877/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">408</div><a class="unvisited-post" href="/posts/42877/" title="二分查找">未读</a></div><a class="article-title" href="/posts/42877/" title="二分查找">二分查找</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-07T00:57:15.000Z" title="发表于 2023-11-07 08:57:15">2023-11-07</time><span class="article-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history" style="font-size: 15px; "></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-09T10:09:58.458Z" title="更新于 2023-12-09 18:09:58">2023-12-09</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>数据结构与算法</span></a><a class="article-meta__tags" href="/tags/%E6%8E%92%E5%BA%8F%E5%92%8C%E6%9F%A5%E6%89%BE/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>排序和查找</span></a></span></div><div class="content">观前提示：以下内容均为天王寺科技所属。与本人无任何联系。下集预告：十大排序——选择排序
 参考网站：代码随想录-二分查找十大编程算法助程序员走上高手之路 | 菜鸟教程704. 二分查找 - 力扣（LeetCode）
 简介在引入二分查找之前，先来想一个问题：在一个有序、无重复数组中 （想一想，为什么要求有序且无重复元素？），给一个目标值，要求定义一个函数返回此目标值在数组中的下标。可能你脑海中第一印象是，遍历数组，依次比较目标值是否与每一个元素相等，相等就返回下标。
 int search( int a[], int length, int target )&#123;    for ( int i = 0; i &lt; length - 1; i++ )    &#123;        if( target == a[i] )        &#123;            return i;        &#125;    &#125;    return -1;&#125;        
